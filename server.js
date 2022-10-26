@@ -18,6 +18,10 @@ app.use('/', require('./routes/root'))
 // Route to access notes
 app.use('/notes(.html)?', require('./routes/api/notes')) 
 
+// Default / catch all route
+// Normally used for 404... 
+app.use('/*', require('./routes/root')) 
+
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 )
