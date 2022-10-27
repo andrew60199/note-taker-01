@@ -12,11 +12,11 @@ app.use(express.urlencoded({ extended: true }))
 // Serve static files within the public folder
 app.use(express.static(path.join(__dirname, '/public')))
 
-// GET Route for homepage
+// GET Route for HTML routes
 app.use('/', require('./routes/root')) 
 
-// Route to access notes
-app.use('/notes(.html)?', require('./routes/api/notes')) 
+// Route to access the api
+app.use('/api ', require('./routes/api/notes')) 
 
 // Default / catch all route
 // Normally used for 404... 
