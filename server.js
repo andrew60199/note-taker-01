@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.use('/', require('./routes/root')) 
 
 // Route to access the api
-app.use('/api ', require('./routes/api/notes')) 
+app.use('/api', require('./routes/api/notes')) 
 
 // Default / catch all route
 // Normally used for 404... 
